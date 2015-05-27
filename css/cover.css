@@ -27,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-image: 
+  background-image: url('/images/binding_dark.png');
 }
 body {
   color: #fff;
@@ -111,6 +111,15 @@ body {
 
 .cover {
   padding: 0 20px;
+}
+.cover-heading {
+    font-size: 95px;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 40px;
+}
+.cover-heading span {
+    font-family: 'Playball', cursive;
+    font-size: 75px;
 }
 .cover .btn-lg {
   padding: 10px 20px;
