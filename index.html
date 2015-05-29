@@ -17,6 +17,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+    
+    <!-- Page Transitions -->
+    <link href="css/animations.css" rel="stylesheet">
+    <script src="js/modernizr.custom.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -38,7 +42,8 @@
 
     <div class="site-wrapper pt-wrapper">
 
-        <div class="page-wrapper">
+        <!-- PAGE 1: LANDING/COVER PAGE -->
+        <div class="page-wrapper pt-page pt-page-1">
 
             <div class="cover-container">
 
@@ -49,27 +54,34 @@
             </div>
 
             <div class="nav nav-right">
-                <button class="nav-btn pt-trigger"><span>About Me</span> <i class="fa fa-chevron-right"></i>
+                <button class="nav-btn pt-trigger" data-animation="1" data-goto="2"><span>About Me</span> <i class="fa fa-chevron-right"></i>
                 </button>
             </div>
             
             <div class="nav nav-bot">
-                <button class="nav-btn pt-trigger"><span>My Blog</span> <i class="fa fa-chevron-down"></i>
+                <button class="nav-btn pt-trigger" data-animation="3"><span>My Blog</span> <i class="fa fa-chevron-down"></i>
                 </button>
             </div>
             
             <div class="nav nav-left">
-                <button class="nav-btn pt-trigger"><span>My Projects</span> <i class="fa fa-chevron-left"></i>
+                <button class="nav-btn pt-trigger" data-animation="2"><span>My Projects</span> <i class="fa fa-chevron-left"></i>
                 </button>
             </div>
 
         </div>
+        
+        <!-- PAGE 2: ABOUT ME -->
+        <div class="pt-page pt-page-2">
+        
+        </div>
+        
 
     </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/pagetransitions.js"></script>
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
