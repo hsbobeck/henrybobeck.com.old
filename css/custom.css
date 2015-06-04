@@ -12,13 +12,45 @@ html, body {
 
 body {
     font-family: 'Maven Pro', Calibri, Arial, sans-serif;
-    color: #fff;
+    color: #e2e2e2;
     background: #333;
     overflow: hidden;
 }
 
+#wip {
+    position: fixed;
+    z-index: 999999;
+    bottom: 5%;
+    left: 2%;
+    font-family: 'Maven Pro', Calibri, Arial, sans-serif;
+    border: 3px solid black;
+    border-radius: 5%;
+    background: #03A9F4;
+    color: black;
+    font-size: 4.1em;
+    padding: 5px 30px 10px 30px;
+}
+
+h2 {
+    font-family: 'Maven Pro';
+}
+
 .playball {
     font-family: 'Playball', Calibri, Arial, sans-serif;
+    color: grey;
+}
+
+.enlarge {    
+    -o-transition: color .5s ease-out, font .5s;
+    -ms-transition: color .5s ease-out, font .5s;
+    -moz-transition: color .5s ease-out, font .5s;
+    -webkit-transition: color .5s ease-out, font .5s;
+    transition: color .5s ease-out, font .5s;
+}
+
+.enlarge:hover {
+    font-size: 1.01em;
+    color: white;
 }
 
 /* Necessary for Page Transitions to function */
@@ -54,7 +86,7 @@ body {
     position: absolute;
     z-index: 999999;
     display: inline-block;
-    left: 38.5%;
+    left: 38%;
     
     /* Removes highlighting */
     -webkit-user-select: none; /* Chrome/Safari */        
