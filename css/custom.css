@@ -1,201 +1,157 @@
-/*
- * Globals
- */
-/* Links */
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-a,
-a:focus,
-a:hover {
-    color: #fff;
-}
-/* Custom default button */
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
 
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-    color: #333;
-    text-shadow: none;
-    /* Prevent inheritence from `body` */
-    
-    background-color: #fff;
-    border: 1px solid #fff;
-}
-/*
- * Base structure
- */
-
-html,
-body {
+html, body {
     height: 100%;
-    background-image: url('/images/binding_dark.png');
+    padding: 0;
+    margin: 0;
 }
 
 body {
+    font-family: 'Maven Pro', Calibri, Arial, sans-serif;
     color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    background: #333;
     overflow: hidden;
 }
-/* Extra markup and styles for table-esque vertical and horizontal centering */
 
-.site-wrapper {
-    display: table;
+.playball {
+    font-family: 'Playball', Calibri, Arial, sans-serif;
+}
+
+/* Necessary for Page Transitions to function */
+.pt-page {
     width: 100%;
     height: 100%;
-    /* For at least Firefox */
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.pt-page-current, .no-js .pt-page {
+    visibility: visible;
+    z-index: 1;
+}
+
+.no-js body {
+    overflow: auto;
+}
+
+.pt-trigger-container {
+    position: absolute;
+    z-index: 999999;
+    display: inline-block;
+    left: 38.5%;
     
-    min-height: 100%;
-    -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-}
-
-.page-wrapper {
-    display: table-cell;
-    vertical-align: top;
-}
-
-.cover-container {
-    margin-right: auto;
-    margin-left: auto;
-}
-/* Padding for spacing */
-
-.inner {
-    padding: 30px;
-}
-/*
- * Cover
- */
-
-.cover {
-    padding: 0 20px;
-}
-
-.cover-heading {
-    font-size: 95px;
-    font-family: 'Maven Pro', sans-serif;
-    margin-bottom: 40px;
-}
-
-.cover-heading span {
-    font-family: 'Playball', cursive;
-    font-size: 75px;
-}
-/*
- * Navigation buttons
- */
-
-.nav {
-    position: fixed;
-}
-
-.nav-btn {
-    /* makes button text-only */
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
+    /* Removes highlighting */
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
     
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 3em;
-    color: grey;
-    
-    line-height: 1.1em;
-    
-    -o-transition: color .2s ease-out;
-    -ms-transition: color .2s ease-out;
-    -moz-transition: color .2s ease-out;
-    -webkit-transition: color .2s ease-out;
-    transition: color .2s ease-out;
 }
 
-.nav-btn:focus {
+.pt-trigger {
     outline: 0;
-}
+    color: wheat;
+    background:none;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px 0 10px;
+    padding: 0 20px;
+    line-height: 40px;
+    height: 40px;
+    letter-spacing: 1px;
 
-/* right nav */
-.nav-right {
-    right: 15px;
-    top: 50%;
-}
-
-.nav-right .nav-btn:hover {
-    color: #00BCD4;
-}
-
-.nav-right span {
-    position: absolute;
-    right: 15px;
-    top: 175%;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-}
-
-/* bot nav */
-.nav-bot {
-    bottom: 15px;
-    right: 935px;
-}
-
-.nav-bot .nav-btn:hover {
-    color: #FF9800;
-}
-
-.nav-bot span {
-    position: absolute;
-    bottom: 40px;
-    left: -50%;
-}
-
-/* left nav */
-.nav-left {
-    left: 15px;
-    top: 50%;
-}
-
-.nav-left .nav-btn:hover {
-    color: #4CAF50;
-}
-
-.nav-left span {
-    position: absolute;
-    left: 135px;
-    bottom: 0%;
-    -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    -o-transform-origin: 0 0;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-}
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-    /* Start the vertical centering */
+    cursor: pointer;
+    font-family: Calibri;
     
-    .page-wrapper {
-        vertical-align: middle;
-    }
-    /* Handle the widths */
-    
-    .cover-container {
-        width: 100%;
-        /* Must be percentage or pixels for horizontal alignment */
-    }
+    -o-transition: color .5s ease-out;
+    -ms-transition: color .5s ease-out;
+    -moz-transition: color .5s ease-out;
+    -webkit-transition: color .5s ease-out;
+    transition: color .5s ease-out;
+
 }
 
-@media (min-width: 992px) {
-    .cover-container {
-        width: 700px;
-    }
+.pt-trigger:hover {
+    color: aqua;
+}
+
+.pt-trigger:focus {
+    text-decoration: underlin
+}
+
+/* Specific Page Styles */
+.pt-page-ontop {
+    z-index: 999;
+}
+
+.pt-page h1 {
+    position: absolute;
+    font-size: 4.4em;
+    line-height: 1;
+    margin: 0;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.pt-page-1 {
+    background: #292F33;
+}
+
+.pt-page-1 h1 {
+    top: 40%;
+}
+
+.pt-page-2 {
+    background: #795548;
+}
+
+.pt-page-3 {
+    background: #656D78;
+}
+
+.pt-page-4 {
+    background: #607D8B;
+}
+
+/*No Animation Support Message Style*/
+.pt-message {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #da475c;
+    color: #fff;
+    text-align: center;
+}
+
+.pt-message p {
+    margin: 0;
+    line-height: 60px;
+    font-size: 26px;
+}
+
+.no-cssanimations .pt-message {
+    display: block;
 }
