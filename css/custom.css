@@ -12,9 +12,13 @@ html, body {
 
 body {
     font-family: 'Maven Pro', Calibri, Arial, sans-serif;
-    color: #e2e2e2;
+    color: #fff;
     background: #333;
     overflow: hidden;
+}
+
+a, a:hover, a:visited {
+    color: #eab758;
 }
 
 #wip {
@@ -23,16 +27,45 @@ body {
     bottom: 5%;
     left: 2%;
     font-family: 'Maven Pro', Calibri, Arial, sans-serif;
-    border: 3px solid black;
-    border-radius: 5%;
+    border: 4px solid black;
+    border-radius: 20%;
     background: #03A9F4;
     color: black;
     font-size: 4.1em;
-    padding: 5px 30px 10px 30px;
+    padding: 5px 30px 18px 30px;
+}
+
+#henry {
+    width: 20em;
+    margin-right: 20px;
 }
 
 h2 {
     font-family: 'Maven Pro';
+}
+
+.content-wrapper {
+    position: relative;
+    top: 6%;
+    height: 88%;
+}
+
+.content-wrapper h1 {
+    text-align: center;
+    font-size: 4.4em;
+    line-height: 1;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+#about-me {
+    text-align:left;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#about-me p {
+    font-size: 20px;
 }
 
 .playball {
@@ -40,7 +73,8 @@ h2 {
     color: grey;
 }
 
-.enlarge {    
+.hover-effect {
+    color: #e2e2e2;    
     -o-transition: color .5s ease-out, font .5s;
     -ms-transition: color .5s ease-out, font .5s;
     -moz-transition: color .5s ease-out, font .5s;
@@ -48,7 +82,7 @@ h2 {
     transition: color .5s ease-out, font .5s;
 }
 
-.enlarge:hover {
+.hover-effect:hover {
     font-size: 1.01em;
     color: white;
 }
@@ -62,6 +96,7 @@ h2 {
     left: 0;
     visibility: hidden;
     overflow: hidden;
+    text-align: center;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -83,10 +118,10 @@ h2 {
 }
 
 .pt-trigger-container {
-    position: absolute;
+    position: relative;
     z-index: 999999;
     display: inline-block;
-    left: 38%;
+    text-align: center;
     
     /* Removes highlighting */
     -webkit-user-select: none; /* Chrome/Safari */        
@@ -130,26 +165,17 @@ h2 {
     text-decoration: underlin
 }
 
-/* Specific Page Styles */
 .pt-page-ontop {
     z-index: 999;
 }
-
-.pt-page h1 {
-    position: absolute;
-    font-size: 4.4em;
-    line-height: 1;
-    margin: 0;
-    top: 10%;
-    width: 100%;
-    text-align: center;
-}
+/* Specific Page Styles */
 
 .pt-page-1 {
     background: #292F33;
 }
 
 .pt-page-1 h1 {
+    position: relative;
     top: 40%;
 }
 
