@@ -180,7 +180,7 @@ h2 {
 }
 
 .pt-page-2 {
-    background: #795548;
+    background: #607D8B;
 }
 
 .pt-page-3 {
@@ -188,10 +188,47 @@ h2 {
 }
 
 .pt-page-4 {
-    background: #607D8B;
+    background: #795548;795548
 }
 
-/*No Animation Support Message Style*/
+/* Social Media Buttons */
+.sm-wrapper {
+    overflow:auto;
+    text-align: center;
+    
+}
+
+.sm-wrapper li {
+    list-style-type: none;
+    display: inline;
+}
+
+.sm-wrapper i {
+    color: #fff;
+    border-radius: 20px;
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10px;
+    -o-transition: color .1s ease-out;
+    -ms-transition: color .1s ease-out;
+    -moz-transition: color .1s ease-out;
+    -webkit-transition: color .1s ease-out;
+    transition: color .1s ease-out;
+}
+
+.sm-wrapper .fa-twitter:hover {
+    color: #55acee;   
+}
+
+.sm-wrapper .fa-codepen:hover {
+    color: #252527;
+}
+
+.sm-wrapper .fa-github-alt:hover {
+    color: #4078C0;
+}
+
+/* No Animation Support Message Style */
 .pt-message {
     display: none;
     position: absolute;
