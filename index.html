@@ -64,16 +64,39 @@
         <div class="pt-page pt-page-3">
             <div class="content-wrapper">
                 <h1><strong>My Projects</strong></h1>
+                
             </div>
         </div>
         <div class="pt-page pt-page-4">
             <div class="content-wrapper">
                 <h1><strong>Contact Me</strong></h1>
-                <p> <a href="mailto: hsbipod@gmail.com">Click here to contact me by email,</a> or choose one of the buttons below to find me on your favorite site:</p>
+                
+                <form id="contact-form" method="post" target="_blank" action="http://formspree.io/hsbipod@gmail.com">
+                    <div >
+                        <div><input type="text" name="name" id="name" placeholder="Name"/></div>
+                        <div><input type="email" name="email" id="email" placeholder="Email"/></div>
+                    </div>
+                    <div>
+                        <div><input type="text" name="subject" id="subject" placeholder="Subject"/></div>
+                    </div>
+                    <div>
+                        <div><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li><input type="submit" class="special" value="Send Message"/></li>
+                                <li><input type="reset" value="Reset Form"/></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>			
+                
                 <div class="sm-wrapper">
-                    <a href="http://twitter.com/henrybobeck" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="http://codepen.io/hsbobeck" target="_blank"><i class="fa fa-codepen"></i></a>
-                    <a href="http://github.com/hsbobeck" target="_blank"><i class="fa fa-github-alt"></i></a>
+                   <a href="http://twitter.com/henrybobeck" target="_blank"><i class="fa fa-twitter"></i></a>
+                   <a href="http://codepen.io/hsbobeck" target="_blank"><i class="fa fa-codepen"></i></a>
+                   <a href="http://github.com/hsbobeck" target="_blank"><i class="fa fa-github-alt"></i></a>
+                   <a href="mailto: hsbipod@gmail.com"><i class="fa fa-envelope-o"></i></a>
                 </div>
             </div>
         </div>

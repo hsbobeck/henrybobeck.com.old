@@ -38,6 +38,8 @@ a, a:link, a:hover, a:visited {
 #henry {
     width: 20em;
     margin-right: 20px;
+    border: solid black 3px;
+    border-radius: 10px;
 }
 
 h2 {
@@ -216,16 +218,16 @@ h2 {
     transition: color .1s ease-out;
 }
 
-.sm-wrapper .fa-twitter:hover {
-    color: #55acee;   
+.sm-wrapper i:hover {
+    color: #747474;
 }
 
-.sm-wrapper .fa-codepen:hover {
-    color: #252527;
+.contact-form {
+    
 }
 
-.sm-wrapper .fa-github-alt:hover {
-    color: #4078C0;
+input {
+    color: #888;
 }
 
 /* No Animation Support Message Style */
