@@ -72,24 +72,15 @@
                 <h1><strong>Contact Me</strong></h1>
                 
                 <form id="contact-form" method="post" target="_blank" action="http://formspree.io/hsbipod@gmail.com">
-                    <div >
-                        <div><input type="text" name="name" id="name" placeholder="Name"/></div>
-                        <div><input type="email" name="email" id="email" placeholder="Email"/></div>
-                    </div>
-                    <div>
-                        <div><input type="text" name="subject" id="subject" placeholder="Subject"/></div>
-                    </div>
-                    <div>
-                        <div><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-                    </div>
-                    <div>
-                        <div>
+                        <input type="text" name="name" id="name" class="col-md-6" placeholder="Name"/>
+                        <input type="email" name="email" id="email" class="col-md-6" placeholder="Email"/>
+                        <input type="text" name="subject" id="subject" placeholder="Subject"/>
+                        <input type="text" name="_gotcha" style="display:none"/>
+                        <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
                             <ul>
                                 <li><input type="submit" class="special" value="Send Message"/></li>
                                 <li><input type="reset" value="Reset Form"/></li>
                             </ul>
-                        </div>
-                    </div>
                 </form>			
                 
                 <div class="sm-wrapper">

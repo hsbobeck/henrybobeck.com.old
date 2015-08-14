@@ -222,12 +222,29 @@ h2 {
     color: #747474;
 }
 
-.contact-form {
-    
+#contact-form {
+    margin: 0 auto;
+    width: 25%
+}
+
+#name {
+    margin-right:;
+}
+
+#subject {
+    width: 
+}
+
+#contact-form ul {
+     list-style:none;
+}
+
+input, textarea {
+    color: #000;
 }
 
 input {
-    color: #888;
+    
 }
 
 /* No Animation Support Message Style */
