@@ -35,8 +35,8 @@ a, a:link, a:hover, a:visited {
     padding: 0 10px 10px 10px;
 }
 
-#henry {
-    width: 20em;
+#henry-pic {
+    width: 100px;
     margin-right: 20px;
     border: solid black 3px;
     border-radius: 10px;
@@ -61,7 +61,7 @@ h2 {
 }
 
 #about-me {
-    text-align:left;
+    text-align: left;
     width: 50%;
     margin: 0 auto;
 }
@@ -268,4 +268,21 @@ input {
 
 .no-cssanimations .pt-message {
     display: block;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1366px) {    
+    #about-me p {
+        font-size: 15px;
+    }
+    
+    #henry-pic {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #henry-pic {
+    }
 }
