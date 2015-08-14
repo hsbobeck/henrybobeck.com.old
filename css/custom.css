@@ -21,18 +21,18 @@ a, a:link, a:hover, a:visited {
     color: #eab758;
 }
 
-#wip {
+.wip {
     position: fixed;
+    top: 50%;
+    right: 25%;
     z-index: 999999;
-    bottom: 5%;
-    left: 2%;
     font-family: 'Maven Pro', Calibri, Arial, sans-serif;
-    border: 4px solid black;
+    border: 2px solid black;
     border-radius: 20%;
     background: #03A9F4;
     color: black;
-    font-size: 4.1em;
-    padding: 5px 30px 18px 30px;
+    font-size: 20px;
+    padding: 0 10px 10px 10px;
 }
 
 #henry {
@@ -76,7 +76,7 @@ h2 {
 }
 
 .hover-effect {
-    color: #e2e2e2;    
+    color: #dbdbdb;    
     -o-transition: color .5s ease-out, font .5s;
     -ms-transition: color .5s ease-out, font .5s;
     -moz-transition: color .5s ease-out, font .5s;
